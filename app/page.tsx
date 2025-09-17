@@ -1,4 +1,6 @@
 import { getResources } from "@/api/resources.api";
+import Header from "@/components/Header";
+
 
 export default async function Home() {
 
@@ -6,8 +8,10 @@ export default async function Home() {
   const resources = await getResources();
 
   return (
-    <div>
-      <p>Ecotricity</p>
+    <div className="w-full flex flex-col items-center">
+      <Header />
+
+
 
       {/* Renders resources */}
       <div>
