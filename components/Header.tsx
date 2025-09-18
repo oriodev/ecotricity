@@ -23,7 +23,7 @@ const Header = (): ReactNode => {
           width={400}
           height={200}
         />
-        <p>Resource Data Archive</p>
+        <p className="text-2xl">Resource Data Archive</p>
       </div>
 
       {/* Purely decorative SVG */}
