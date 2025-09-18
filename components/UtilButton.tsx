@@ -16,7 +16,7 @@ interface UtilButtonProps {
  */
 const UtilButton = ({ text, icon: Icon }: UtilButtonProps): ReactNode => {
   return (
-    <div className="flex justify-center items-center gap-2 rounded-4xl ecotricity p-4">
+    <div className="flex justify-center items-center gap-2 rounded-4xl bg-ecotricity p-4">
       <Icon size={20} />
       <p className="text-md">{ text }</p>
     </div>

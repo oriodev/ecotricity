@@ -1,6 +1,7 @@
 // PACKAGES
+import Link from "next/link";
 import { ReactNode } from "react";
-import { BsArrowRight } from "react-icons/bs";
+import { BiDownload } from "react-icons/bi";
 
 interface ResourceProps {
   name: string;
@@ -18,6 +19,7 @@ interface ResourceProps {
  * @returns ReactNode
  */
 const Resource = ({ name, description, url}: ResourceProps): ReactNode => {
+
   return (
     <div className="w-full flex justify-between gap-5 pb-3 border-b-2 border-b-solid">
       
@@ -37,10 +39,16 @@ const Resource = ({ name, description, url}: ResourceProps): ReactNode => {
 
       {/* Download Button */}
       <div>
-        <button className="flex gap-5 p-4 ecotricity rounded-md">
+        <Link 
+          href={url}
+          className="
+            flex items-center gap-2 p-4 border-3 border-white bg-ecotricity rounded-md 
+            hover:bg-white hover:border-3 hover:border-ecotricity duration-300 ease-in ease-out
+          "
+        >
+          <BiDownload size={22} />
           <p className="text-lg">Download</p>
-          <BsArrowRight size={30} />
-        </button>
+        </Link>
       </div>
     </div>
   )
