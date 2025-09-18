@@ -5,10 +5,10 @@ import { getResources } from "@/api/resources.api";
 import Header from "@/components/Header";
 import Resource from "@/components/Resource";
 import UtilButton from "@/components/UtilButton";
+import Footer from "@/components/Footer";
 
 // PACKAGES
 import { BiDownload, BiSelectMultiple } from "react-icons/bi";
-
 
 export default async function Home() {
 
@@ -21,7 +21,6 @@ export default async function Home() {
 
       {/* Main Component Section */}
       <div className="w-2/3 flex flex-col gap-5 mt-15">
-
         {/* Selection Buttons */}
         <div className="flex gap-5">
           <UtilButton text="Select All" icon={BiSelectMultiple} />
@@ -36,8 +35,9 @@ export default async function Home() {
             ))
           }
         </div>
-
       </div>
+
+      <Footer />
 
     </div>
   );
