@@ -5,9 +5,8 @@
   --foreground: #171717;
 }
 
-/* TODO: MAKE THIS TAILWIND THEME COLOUR INSTEAD OF BACKGROUND CLASS */
-.ecotricity {
-  background-color: #B6F334;
+@theme {
+  --color-ecotricity: #B6F334;
 }
 
 /* @theme inline {
