@@ -37,8 +37,8 @@ const Resource = ({ resource, onCheck, selected}: ResourceProps): ReactNode => {
 
         {/* Text */}
         <div className="flex flex-col">
-          <h3 className="text-xl">{name}</h3>
-          <p className="text-md">{description}</p>
+          <h3 className="text-2xl">{name}</h3>
+          <p className="text-lg">{description}</p>
         </div>
       </div>
 
