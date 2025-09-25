@@ -17,6 +17,7 @@ export const getResources = async (): Promise<Resource[]> => {
 
   // Returns only the relevant properties
   const resources: Resource[] = fullResources.map((resource: FullResource) => ({
+      id: resource.id,
       name: resource.name,
       description: resource.description,
       url: resource.url
