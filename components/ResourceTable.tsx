@@ -25,6 +25,8 @@ const ResourceTable = ({ resources }: ResourceTableProps ): ReactNode => {
   // MULTIPLE SELECTION LOGIC
 
   const [selectedResources, setSelectedResources] = useState<ResourceType[]>([]);
+  const addResource = (resource: ResourceType) => setSelectedResources(prev => [resource, ...prev]);
+  const removeResource = (resource: ResourceType) => setSelectedResources(prev => prev.filter(res => res.id !== resource.id));
 
   /**
    * Checks whether a resource is in selected resources and adds or removes it
@@ -32,9 +34,7 @@ const ResourceTable = ({ resources }: ResourceTableProps ): ReactNode => {
    */
   const onCheck = (resource: ResourceType): void => {
     const resourceSelected = selectedResources.includes(resource);
-    resourceSelected ? 
-      setSelectedResources(prev => [resource, ...prev])
-      : setSelectedResources(prev => prev.filter(res => res.id !== resource.id));
+    resourceSelected ? removeResource(resource) : addResource(resource);
   }
 
   /**
